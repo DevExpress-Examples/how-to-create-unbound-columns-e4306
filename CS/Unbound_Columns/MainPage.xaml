@@ -1,0 +1,21 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Unbound_Columns"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Grid="using:DevExpress.UI.Xaml.Grid"
+    x:Class="Unbound_Columns.MainPage"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid:GridControl Name="grid" AutoGenerateColumns="False" CustomUnboundColumnData="grid_CustomUnboundColumnData" ShowFixedTotalSummary="True" >
+            <Grid:GridControl.Columns>
+                <Grid:GridTextColumn FieldName="ProductName" />
+                <Grid:GridTextColumn FieldName="UnitPrice"/>
+                <Grid:GridTextColumn FieldName="Quantity" />
+                <Grid:GridTextColumn FieldName="Total" UnboundType="Decimal" />
+            </Grid:GridControl.Columns>
+        </Grid:GridControl>
+    </Grid>
+</Page>
